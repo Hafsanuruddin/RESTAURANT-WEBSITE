@@ -2,9 +2,20 @@
 width:100%; 
 height: 100%;
 position: relative; 
-background-image: url(https://via.placeholder.com/1440x1300);
+background-image: url(images/Ambiance1.jpg);
 }  
 .Frame2{
+width: 1440px;
+ height: 1300px;
+  left: 11px;
+   top: 20px;
+    position: absolute;
+     background: rgba(0, 0, 0, 0.73)
+}
+
+.Desktop1{
     width: 100%;
-     height: 100%; position: relative; background: rgba(0, 0, 0, 0.73);
+     height: 100%;
+      position: relative;
+       background: white;
 }

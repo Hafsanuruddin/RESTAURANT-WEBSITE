@@ -3,52 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking page</title>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(35, 32, 32);
+            background-repeat: no-repeat;
+       
+        background-image: url("6.jpeg");
+       background-size: cover;
+        }
+
+        .center {
+            max-width: 600px;
+            margin: 10px auto;
+            height: 700px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+         text-align: center; background-image: url("images/bookingBG.jpg") ;
+            background-repeat: no-repeat;
+        background-size: cover;
+
+
+        }
+        .center h1{
+            text-align: center;
+            padding: 0 0 20px 0;
+           border-bottom: 1px solid silver;
+        }
+        .center form{
+          padding: 0 40px;
+          box-sizing: border-box;
+        }
+        form .txt_field{
+            position: relative;
+            border-bottom: 2px solid black;
+            margin: 30px 0;
+        }
+        form .txt_field1{
+            position: relative;
+            border-bottom: 2px solid black;
+            margin: 30px 0;
+        }
+        .txt_field input{
+            width: 100%;
+            padding: 0px 50px;
+            height: 50px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+            color: rgb(121, 114, 114);;
+        }
+        .txt_field1 input{
+            width: 100%;
+            padding: 0px 50px;
+            height: 50px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+            color: rgb(121, 114, 114);
+        }.txt_field label{
+            position: absolute;
+            top: 50%; 
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%); 
+            font-size: 16px;
+            pointer-events: none;
+
+}
+.txt_field1 label{
+            position: absolute;
+            top: 50%; 
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%); 
+            font-size: 16px;
+            pointer-events: none;
+
+}
+
+.txt_field span::before{
+     content:"";
+     position: absolute;
+     top: 48px;
+     left: 0;
+     width: 0%;
+     height: 2px;
+     background:#E7653D ;
+        }
+        .txt_field input:focus ~ label,
+        .txt_field input:valid~label{
+            top: -5px;
+            color: #E7653D;
+        }
+        .txt_field input:focus~span::before,
+        .txt_field input:valid~span::before{
+            width: 100%;
+
+        }
+        .txt_field1 input:focus ~ label,
+        .txt_field1 input:valid~label{
+            top: -5px;
+            color: #E7653D;
+        }
+        .txt_field1 input:focus~span::before,
+        .txt_field1 input:valid~span::before{
+            width: 100%;
+
+        }
+        .button {
+            background-color: #E7653D;
+            color: #ffffff;
+            border: none;
+            padding: 10px 100px;
+            border-radius: 30px;
+            cursor: pointer;
+ margin:20px auto;
+ display: block;
+
+        }
+
+        .button:hover {
+            background-color: rgb(180, 134, 104);
+            animation: reverse ;
+        }
+        .L{
+            font-family: 'Lucida Handwriting',cursive;
+            color: #E7653D;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+        .S{
+            color: rgb(157, 153, 152);
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        
+
+    </style>
 </head>
 <body>
-    <div class="Desktop1" style="width: 100%; height: 100%; position: relative; background: white">
-        <img class="Rectangle1" style="width: 720px; height: 731px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/720x731" />
-        <img class="Rectangle2" style="width: 720px; height: 731px; left: 720px; top: 0px; position: absolute" src="https://via.placeholder.com/720x731" />
-        <div class="BookATable" style="width: 708px; height: 731px; left: 732px; top: 731px; position: absolute">
-            <div class="Rectangle5" style="width: 707.06px; height: 731px; left: 0px; top: 0px; position: absolute; background: #070000; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); backdrop-filter: blur(6px)"></div>
-            <div class="BookATable" style="left: 36.89px; top: 0px; position: absolute; color: white; font-size: 24px; font-family: Inknut Antiqua; font-weight: 500; word-wrap: break-word">Book a table</div>
-            <div class="AnOnlineRestaurantTableReservationFormIsUsedToTrackBookingsAndManageReservationsThroughAHotelSWebsite" style="width: 624.90px; left: 36.89px; top: 74.47px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">An online restaurant table reservation form is used to track bookings and manage reservations through a hotel's website.</div>
-            <div class="Boxes" style="width: 634.11px; height: 482.26px; left: 36.89px; top: 179.74px; position: absolute">
-                <div class="Name" style="width: 634.11px; height: 81.73px; left: 0px; top: 0px; position: absolute">
-                    <div class="Name" style="left: 0px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Name</div>
-                    <div class="Frame1" style="width: 634px; height: 50px; left: 0.11px; top: 31.73px; position: absolute; border: 2px #E7653D solid">
-                        <div class="EnterYourName" style="left: 24.56px; top: 15.50px; position: absolute; color: #9A9595; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Enter  your Name</div>
-                    </div>
+    <div class="center">
+        
+        <p class="L">Book a table</p>
+        <p class="S">Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully</p>
+        <form method="post" >
+            
+            <div class="txt_field">      
+                <input type="text" required>        
+                <label>Username</label>        
                 </div>
-                <div class="Persons" style="width: 634px; height: 80.85px; left: 0px; top: 98.89px; position: absolute">
-                    <div class="NumberOfPersons" style="left: 0px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Number of persons</div>
-                    <div class="Frame2" style="width: 634px; height: 50px; left: 0px; top: 30.85px; position: absolute; border: 2px #E7653D solid">
-                        <div class="EnterTheNumberOfPersons" style="left: 24.56px; top: 15.50px; position: absolute; color: #A29797; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Enter  the  number of persons</div>
-                    </div>
+                <div class="txt_field">        
+                  <input type="number" min="1" max="6" required>      
+                  <label>Number of persons</label>
                 </div>
-                <div class="Date" style="width: 302.86px; height: 83.91px; left: 0.11px; top: 307.35px; position: absolute">
-                    <div class="Date" style="width: 71.09px; left: 0px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Date</div>
-                    <div class="Frame5" style="width: 302.86px; height: 50px; left: 0px; top: 33.91px; position: absolute; border: 2px #E7653D solid">
-                        <div class="MmDdYyyy" style="width: 107.46px; height: 19.77px; left: 12.74px; top: 15.50px; position: absolute; color: #A29797; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">MM/DD/YYYY</div>
-                    </div>
-                </div>
-                <div class="Time" style="width: 302px; height: 83.91px; left: 332.11px; top: 307.35px; position: absolute">
-                    <div class="Time" style="width: 76.88px; left: 0px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Time</div>
-                    <div class="Frame6" style="width: 302px; height: 50px; left: 0px; top: 33.91px; position: absolute; border: 2px #E7653D solid">
-                        <div class="HhMm" style="width: 107.46px; height: 19.77px; left: 12.74px; top: 15.50px; position: absolute; color: #A29797; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">HH:MM</div>
-                    </div>
-                </div>
-                <div class="Table" style="width: 634px; height: 81.73px; left: 0px; top: 201px; position: absolute">
-                    <div class="TableNumber" style="left: 0px; top: 0px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Table Number</div>
-                    <div class="Frame4" style="width: 634px; height: 50px; left: 0px; top: 31.73px; position: absolute; border: 2px #E7653D solid">
-                        <div class="EnterTheTableNumber" style="left: 24.56px; top: 15.50px; position: absolute; color: #A29797; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word">Enter  the  table number</div>
-                    </div>
-                </div>
-                <div class="Frame8" style="width: 634px; height: 50px; left: 0.11px; top: 432.26px; position: absolute; background: #E7653D; border-radius: 1000px; overflow: hidden">
-                    <div class="BookATable" style="width: 92px; height: 21.23px; left: 271px; top: 14.39px; position: absolute; color: white; font-size: 16px; font-family: Inria Serif; font-weight: 400; word-wrap: break-word"><br/><br/><br/><br/><br/><br/><br/><br/>Book a Table</div>
-                </div>
-            </div>
-        </div>
+                <div class="txt_field">        
+                    <input type="number" min="1" max="20" required>      
+                    <label> Table Number</label>
+                  </div>
+                  <div class="txt_field1" style="margin-bottom: 10px;">        
+                    <input type="date" required>      
+                    <label>Date</label>
+                  </div>
+                  <div class="txt_field1" style="margin-bottom: 50px;">        
+                    <input type="time" min="7:00" max="21:00" required>      
+                    <label>Time</label>
+                  </div>
+                  
+               
+               
+            <button class="button" type="submit">book a table</button>
+            <a href="#" id="book-table-link">Book a Table</a>
+        </form>
     </div>
-</body>
+</body>>
 </html>

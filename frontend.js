@@ -21,46 +21,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// popup login javscript on booking table
-document.addEventListener("DOMContentLoaded", function () {
-    // Your existing code for the slideshow here...
 
-    // Define the "Book a Table" link element
-    const bookTableLink = document.getElementById("book-table-link");
 
-    // Function to display the login/register popup
-    function displayPopup() {
-        // Create and style the popup element (you can customize this)
-        const popup = document.createElement("div");
-        popup.className = "popup";
-        popup.innerHTML = `
-            <!-- Popup content goes here, e.g., login and register forms -->
-            <h2>Login or Register</h2>
-            <!-- Add your login and register forms here -->
-        `;
+// Function to display the popup
+function displayPopup() {
+    const popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = `
+        <h2>Register or Login</h2>
+        <h3>New user?</h3>
+        <div class="popup-content">
+            <button id="register-button">Register</button>
+            <h3> Already have an Account? </h3>
+            <button id="login-button">Login</button>
+        </div>
+    `;
 
-        // Append the popup to the body
-        document.body.appendChild(popup);
+    document.body.appendChild(popup);
 
-        // Prevent the default behavior of the link
-        bookTableLink.addEventListener("click", function (e) {
-            e.preventDefault();
-        });
+    // Handle Register button click
+    document.getElementById("register-button").addEventListener("click", function () {
+        // Redirect to register.html
+        window.location.href = "register.html";
+    });
 
-        // You can add event listeners to close the popup when necessary
-        // For example, when the user successfully logs in or registers
+    // Handle Login button click
+    document.getElementById("login-button").addEventListener("click", function () {
+        // Redirect to login.html
+        window.location.href = "login.html";
+    });
 
-        // Example: Close the popup when the user clicks outside of it
-        window.addEventListener("click", function (e) {
-            if (e.target === popup) {
-                document.body.removeChild(popup);
-            }
-        });
-    }
+    // Close the popup when clicking outside of it
+    window.addEventListener("click", function (e) {
+        if (e.target === popup) {
+            document.body.removeChild(popup);
+        }
+    });
+}
 
-    // Add a click event listener to the "Book a Table" link
-    bookTableLink.addEventListener("click", displayPopup);
+// Add click event listener to the "Book a Table" link
+document.getElementById("book-table-link").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default link behavior
+    displayPopup(); // Display the popup
 });
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // Add login or registration logic here
 
-
-
+    // Redirect to booking.html after successful login or registration
+    window.location.href = "booking.html";
+});

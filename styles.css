@@ -203,13 +203,65 @@ body {
     /* Set appropriate widths, heights, margins, and padding here */
   }
 
-  .popup {
+ 
+/* Add styles for the popup */
+/* Style for the popup container */
+/* Style for the larger popup container */
+.popup {
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure the popup is on top of other content */
+    background-color:black;
+    padding: 100px;
+    box-shadow: 0 0 20px rgb(220, 220, 220);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Style for the popup heading */
+.popup h2 {
+    font-size: 38px;
+    color: #d3cbcb;
+    margin-top:0px ;
+    margin-bottom: 36px;
+}
+
+.popup h3 {
+    
+    color: #d3cbcb;
+    margin-bottom: 3px;
+}
+/* Style for the popup buttons */
+.popup button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #613325;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.popup button:hover {
+    background-color: #816d69;
+    transform: translateY(5px);
+}
+
+/* Style for the text below the buttons */
+.popup-text {
+    font-size: 18px;
+    color: #fefefe;
+    margin-top: 20px;
+}
+
+/* Center the buttons and text horizontally */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

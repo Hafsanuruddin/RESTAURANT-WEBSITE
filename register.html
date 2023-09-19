@@ -119,29 +119,26 @@
         
         <p class="L">Register</p>
         <p class="S">Create your account</p>
-        <form method="post" id="register-form" >
+        <form action="/register" method="POST">
             
             <div class="txt_field">      
-                <input type="text" required>        
+                <input type="text" name="username" required>        
                 <label>Username</label>        
                 </div>
                 <div class="txt_field">        
-                  <input type="password" required>      
+                  <input type="password" name="password" required>      
                   <label>Password</label>
                 </div>
-                <div class="txt_field">        
-                    <input type="password" required>      
-                    <label> Confirm Password</label>
-                  </div>
+               
                   <div class="txt_field" style="margin-bottom: 10px;">        
-                    <input type="email" required>      
+                    <input type="email" name="email" required>      
                     <label>Mail</label>
                   </div>
                   
                <div>  
                   <button class="register-button" type="submit">Register</button>
                </div>
-               A restaurant website for easy table booking and menu exploration.
+               A restaurant website for easy table booking and menu exploration.<br>
                 <a href="#"  >Fogot password?</a>
         
                <p style="color: rgb(255, 255, 255);">--OR--</p>

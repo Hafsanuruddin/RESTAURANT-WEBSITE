@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const { User, Booking } = require('./models/user');
 const Table = require('./models/table');
+const { EmailSubscription } = require('./models/emailSubscriptions'); 
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -182,3 +184,27 @@ app.get('/check-availability', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+// Handle email subscription
+app.post('/subscribe', async (req, res) => {
+    try {
+        const { email } = req.body;
+        const existingSubscription = await EmailSubscription.findOne({ email });
+
+        if (existingSubscription) {
+            return res.status(400).send('Email already subscribed.');
+        }
+
+        const newSubscription = new EmailSubscription({ email });
+        await newSubscription.save();
+        res.status(200).send('Subscription successful.');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('An error occurred during subscription.');
+    }
+});
+
+
+
+
+

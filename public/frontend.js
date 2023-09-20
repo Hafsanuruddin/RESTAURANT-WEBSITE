@@ -65,6 +65,16 @@ document.getElementById("book-table-link").addEventListener("click", function (e
     displayPopup(); // Display the popup
 });
 
+
+// Add click event listener to the "Book a Table" button
+document.getElementById("book-table-button").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default button behavior (form submission or link navigation)
+
+    // Display the popup
+    displayPopup();
+});
+
+
 const loginForm = document.getElementById("login-form");
 
 // Add submit event listener to the login form
@@ -95,3 +105,34 @@ loginForm.addEventListener("submit", async (e) => {
         // Handle other potential errors here
     }
 }); 
+// Add click event listener to the "Subscribe" button
+document.getElementById("subscribe-button").addEventListener("click", async () => {
+    const email = document.getElementById("email-input").value;
+
+    try {
+        // Send a POST request to your server for email subscription
+        const response = await fetch("/subscribe", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+        });
+
+        if (response.status === 200) {
+            // Subscription successful
+            alert("Subscription successful.");
+            // Clear the email input field
+            document.getElementById("email-input").value = "";
+        } else if (response.status === 400) {
+            // Email already subscribed
+            alert("Email already subscribed.");
+        } else {
+            // Display an error message to the user
+            console.error("Subscription failed. Please try again.");
+        }
+    } catch (error) {
+        console.error(error);
+        // Handle other potential errors here
+    }
+});

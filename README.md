@@ -1,7 +1,9 @@
-# RESTAURANT-WEBSITE
-
+# RESTAURANT-WEBSITE#
+Restaurant Website Project
 
 This is a web application project for a restaurant website. It allows users to browse the menu, register, login, and book tables.
+
+
 
 ## Features
 - Menu browsing
@@ -15,3 +17,4 @@ Before you begin, ensure you have met the following requirements:
 - [Node.js](https://nodejs.org/) installed
 - [MongoDB](https://www.mongodb.com/) installed and running
 - [npm](https://www.npmjs.com/) (Node Package Manager) installed
+

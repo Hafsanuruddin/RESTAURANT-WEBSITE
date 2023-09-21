@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 mongoose.connect('mongodb://localhost:27017/restaurant_webiste', {
     useNewUrlParser: true,
@@ -30,11 +30,11 @@ db.once('open', () => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/home.html');
+    res.sendFile(__dirname + '/docs/home.html');
 });
 
 app.get('/menu.html', (req, res) => {
-    res.sendFile(__dirname + '/public/menu.html');
+    res.sendFile(__dirname + '/docs/menu.html');
 });
 
 // Define an array of available tables (adjust the table numbers as needed)
@@ -66,10 +66,10 @@ async function initializeTables() {
 }
 
 // Call the function to initialize tables
-initializeTables();
+//initializeTables();
 
 app.get('/register', (req, res) => {
-    res.sendFile(__dirname + '/public/register.html');
+    res.sendFile(__dirname + '/docs/register.html');
 });
 
 app.post('/register', async (req, res) => {
@@ -94,7 +94,7 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/public/login.html');
+    res.sendFile(__dirname + '/docs/login.html');
 });
 
 app.post('/login', async (req, res) => {

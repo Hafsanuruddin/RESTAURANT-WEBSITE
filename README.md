@@ -3,7 +3,7 @@
 
 This is a web application project for a restaurant website. It allows users to browse the menu, register, login, and book tables.
 
-## Features
+## Featuresk
 - Menu browsing
 - User registration and login
 - Table booking

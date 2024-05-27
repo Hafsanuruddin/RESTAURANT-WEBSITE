@@ -286,3 +286,80 @@ body {
     .Rectangleservice:hover{
         box-shadow:  0 0 50px rgba(255, 255, 255, 0.5);
     } 
+/* Media queries for smaller devices */
+@media (max-width: 768px) {
+    .caption {
+        font-size: 5vw;
+        top: 120px;
+    }
+
+    .btn {
+        width: 80%;
+        height: auto;
+        top: 220px;
+        font-size: 5vw;
+    }
+
+    .heading {
+        font-size: 10vw;
+    }
+
+    .NavLinks {
+        flex-direction: column;
+        top: 90px;
+    }
+
+    .NavLinks a {
+        font-size: 4vw;
+    }
+
+    .Link {
+        font-size: 3.5vw;
+    }
+
+    .menupic {
+        width: 30vw;
+    }
+
+    .popup h2, .popup h3, .popup button, .popup-text {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .caption {
+        font-size: 6vw;
+        top: 100px;
+    }
+
+    .btn {
+        width: 90%;
+        top: 200px;
+        font-size: 6vw;
+    }
+
+    .heading {
+        font-size: 12vw;
+    }
+
+    .NavLinks {
+        flex-direction: column;
+        top: 100px;
+    }
+
+    .NavLinks a {
+        font-size: 5vw;
+    }
+
+    .Link {
+        font-size: 4vw;
+    }
+
+    .menupic {
+        width: 50vw;
+    }
+
+    .popup h2, .popup h3, .popup button, .popup-text {
+        font-size: 6vw;
+    }
+}
